@@ -1,0 +1,122 @@
+[
+    {
+        "title": "Essence de Rose",
+        "description": "Fresh, floral, romantic",
+        "price": 149.99,
+        "image": "p (1).jpg"
+    },
+    {
+        "title": "Brise Marine",
+        "description": "Refreshing, aquatic, clean",
+        "price": 159.99,
+        "image": "p (2).jpg"
+    },
+    {
+        "title": "Champs de Lavande",
+        "description": "Aromatic, calming, floral",
+        "price": 154.99,
+        "image": "p (3).jpg"
+    },
+    {
+        "title": "Éclat d’Agrumes",
+        "description": "Fruity, zesty, vibrant",
+        "price": 144.99,
+        "image": "p (4).jpg"
+    },
+    {
+        "title": "Soleil d’Été",
+        "description": "Warm, bright, radiant",
+        "price": 146.99,
+        "image": "p (5).jpg"
+    },
+    {
+        "title": "Mystère Nocturne",
+        "description": "Intense, bold, captivating",
+        "price": 169.99,
+        "image": "p (6).jpg"
+    },
+    {
+        "title": "Fleur de Vanille",
+        "description": "Sweet, tropical, soft",
+        "price": 139.99,
+        "image": "p (7).jpg"
+    },
+    {
+        "title": "Amour Parisien",
+        "description": "Romantic, elegant, timeless",
+        "price": 174.99,
+        "image": "p (8).jpg"
+    },
+    {
+        "title": "Jardin Enchanté",
+        "description": "Floral, magical, fresh",
+        "price": 151.99,
+        "image": "p (9).jpg"
+    },
+    {
+        "title": "Étoile Filante",
+        "description": "Fresh, light, airy",
+        "price": 162.99,
+        "image": "p (10).jpg"
+    },
+    {
+        "title": "Velours Pourpre",
+        "description": "Rich, fruity, luxurious",
+        "price": 158.99,
+        "image": "p (11).jpg"
+    },
+    {
+        "title": "Bois de Santal",
+        "description": "Woody, spicy, exotic",
+        "price": 155.49,
+        "image": "p (12).jpg"
+    },
+    {
+        "title": "Pétale de Jasmin",
+        "description": "Elegant, floral, exotic",
+        "price": 142.49,
+        "image": "p (13).jpg"
+    },
+    {
+        "title": "Élixir d’Améthyste",
+        "description": "Sophisticated, deep, mysterious",
+        "price": 165.99,
+        "image": "p (14).jpg"
+    },
+    {
+        "title": "Rêve d’Or",
+        "description": "Precious, luminous, elegant",
+        "price": 157.99,
+        "image": "p (15).jpg"
+    },
+    {
+        "title": "Flamme Passionnée",
+        "description": "Bold, daring, sensual",
+        "price": 169.49,
+        "image": "p (16).jpg"
+    },
+    {
+        "title": "Douceur de Miel",
+        "description": "Sweet, warm, cozy",
+        "price": 147.49,
+        "image": "p (17).jpg"
+    },
+    {
+        "title": "Lune Argentée",
+        "description": "Light, mysterious, ethereal",
+        "price": 163.99,
+        "image": "p (18).jpg"
+    },
+    {
+        "title": "Vent de Provence",
+        "description": "Fresh, Mediterranean, airy",
+        "price": 153.99,
+        "image": "p (19).jpg"
+    },
+    {
+        "title": "Ombre de Soie",
+        "description": "Soft, sensual, sweet",
+        "price": 161.49,
+        "image": "p (20).jpg"
+    }
+]

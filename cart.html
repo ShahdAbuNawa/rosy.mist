@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Your Cart - Rosy Mist</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #3C3D37;
+            /* Customize border color */
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #3C3D37;
+            /* Customize header background */
+            color: #ffffff;
+            /* Customize header text color */
+        }
+
+        button {
+            padding: 5px 10px;
+            margin: 0 5px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .increase-qty,
+        .decrease-qty {
+            background-color: #3C3D37;
+            /* Customize button color */
+            color: #ffffff;
+        }
+
+        .remove-item {
+            background-color: #e74c3c;
+            /* Remove button color */
+            color: white;
+        }
+
+        #clear-cart {
+            background-color: #95a5a6;
+            /* Clear cart button color */
+            color: white;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #clear-cart:hover {
+            background-color: #7f8c8d;
+        }
+
+        img {
+            max-width: 100px;
+            height: auto;
+        }
+
+        /* Optional: Responsive Table */
+        @media (max-width: 768px) {
+
+            table,
+            thead,
+            tbody,
+            th,
+            td,
+            tr {
+                display: block;
+            }
+
+            th {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+
+            tr {
+                border: 1px solid #ccc;
+            }
+
+            td {
+                border: none;
+                border-bottom: 1px solid #eee;
+                position: relative;
+                padding-left: 50%;
+                text-align: left;
+            }
+
+            td:before {
+                position: absolute;
+                top: 6px;
+                left: 6px;
+                width: 45%;
+                padding-right: 10px;
+                white-space: nowrap;
+                font-weight: bold;
+            }
+
+            td:nth-of-type(1):before {
+                content: "Image";
+            }
+
+            td:nth-of-type(2):before {
+                content: "Name";
+            }
+
+            td:nth-of-type(3):before {
+                content: "Description";
+            }
+
+            td:nth-of-type(4):before {
+                content: "Price";
+            }
+
+            td:nth-of-type(5):before {
+                content: "Quantity";
+            }
+
+            td:nth-of-type(6):before {
+                content: "Total";
+            }
+
+            td:nth-of-type(7):before {
+                content: "Actions";
+            }
+        }
+
+        /* Style for the cart count badge */
+        #cart-count {
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 12px;
+            vertical-align: super;
+            margin-left: 5px;
+        }
+
+        /* Modal Styles (if not already included in styles.css) */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .modal.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background-color: var(--color-light-pink);
+            padding: 20px 30px;
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            text-align: center;
+            max-width: 400px;
+            width: 80%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-content p {
+            color: var(--color-text-dark);
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .modal-content button {
+            background-color: var(--color-dark-pink);
+            color: var(--color-text-dark);
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin: 0 10px;
+        }
+
+        .modal-content button:hover {
+            background-color: var(--color-medium-pink);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <img src="logo.jpg" alt="Rosy Mist Logo" class="header-logo">
+            <h1>Rosy Mist</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li>
+                        <a href="cart.html">
+                            <i class="fa-solid fa-cart-shopping"></i> <span id="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section id="cart-page">
+            <div class="container">
+                <h2>Your Cart</h2>
+                <div id="cart-items">
+                    <!-- Cart items will be displayed here -->
+                </div>
+                <button id="clear-cart">Clear Cart</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p class="con">Contact us at info@perfumestore.com</p>
+        <div class="social-media">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <!-- Custom Modal for Clear Cart Confirmation -->
+    <div id="custom-modal" class="modal">
+        <div class="modal-content">
+            <p id="modal-text">Are you sure you want to clear the entire cart?</p>
+            <button id="confirm-clear-cart">Yes</button>
+            <button id="cancel-clear-cart">No</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="cart.js"></script>
+    <script>
+        // Function to close the modal when clicking outside the modal content
+        window.addEventListener('click', function (event) {
+            const modal = document.getElementById('custom-modal');
+            if (event.target === modal) {
+                modal.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,752 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+    --color-background: #F6F5F2;
+    --color-light-pink: #F0EBE3;
+    --color-medium-pink: #F3CDD0;
+    --color-dark-pink: #FFEFEF;
+    --color-text-dark: #3C3D37;
+    --color-text-light: #ecf0f1;
+    --color-border: #bdc3c7;
+    --color-hover: #e2b5bd;
+}
+
+body {
+    background-image: url("iman.jpeg");
+    background-repeat: repeat;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: var(--color-medium-pink);
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 20px;
+}
+
+.header-logo {
+    width: 60px;
+    height: auto;
+    margin-right: 10px;
+}
+
+header {
+    background-color: var(--color-medium-pink);
+    color: var(--color-text-light);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    color: var(--color-text-dark);
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    position: relative;
+    text-decoration: none;
+    color: var(--color-text-dark);
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-size: 18px;
+    padding: 10px 15px;
+}
+
+nav ul li a:hover {
+    color: var(--color-dark-pink);
+}
+
+nav ul li a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--color-text-light);
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+main {
+    padding-top: 100px;
+}
+
+.our {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 25px;
+}
+
+#featured {
+    background: transparent;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#featured h2 {
+    color: var(--color-text-dark);
+    margin-bottom: 30px;
+    font-size: 25px;
+}
+
+.perfume-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.perfume-item {
+    background-color: var(--color-medium-pink);
+    border: 1px solid var(--color-border);
+    margin: 15px;
+    padding: 15px;
+    width: calc(25% - 60px);
+    box-sizing: border-box;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 8px;
+}
+
+.perfume-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(242, 190, 209, 0.2);
+}
+
+.perfume-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.perfume-item h3 {
+    color: var(--color-text-dark);
+    margin: 10px 0 5px 0;
+    font-size: 18px;
+}
+
+.perfume-item p {
+    color: var(--color-text-dark);
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.add-to-cart {
+    background-color: var(--color-text-light);
+    color: var(--color-text-dark);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: var(--color-hover);
+}
+
+footer {
+    background-color: var(--color-medium-pink);
+    color: var(--color-text-dark);
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.con {
+    color: var(--color-text-dark);
+    font-weight: bold;
+}
+
+.social-media {
+    margin-top: 20px;
+    color: var(--color-text-dark);
+}
+
+.social-media a {
+    font-size: 24px;
+    margin: 0 10px;
+    color: var(--color-text-dark);
+    transition: color 0.3s ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.social-media a:hover {
+    color: var(--color-dark-pink);
+}
+
+button {
+    background-color: var(--color-dark-pink);
+    color: var(--color-text-dark);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+button.add-to-cart {
+    background-color: var(--color-text-light);
+    color: var(--color-text-dark);
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+button.add-to-cart:hover {
+    background-color: var(--color-hover);
+}
+
+button:focus,
+.add-to-cart:focus {
+    outline: none;
+}
+
+a {
+    color: var(--color-text-dark);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-dark-pink);
+}
+
+#search {
+    background: transparent;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    min-height: 10px;
+}
+
+#search-bar {
+    width: 15%;
+    margin-left: auto;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid var(--color-light-pink);
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+#search-bar:focus {
+    border-color: var(--color-dark-pink);
+    outline: none;
+}
+
+#about-us {
+    background-color: var(--color-medium-pink);
+    padding: 50px 20px;
+    text-align: left;
+}
+
+#contact-form {
+    background-color: var(--color-light-pink);
+    padding: 50px 20px;
+}
+
+#contact-form h2 {
+    text-align: start;
+    color: var(--color-text-dark);
+    margin-bottom: 30px;
+}
+
+#contactForm {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contactForm label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--color-text-dark);
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 500px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+    border-color: var(--color-dark-pink);
+    outline: none;
+}
+
+#contactForm button {
+    width: 100%;
+    background-color: var(--color-dark-pink);
+    color: var(--color-text-dark);
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contactForm button:hover {
+    background-color: var(--color-medium-pink);
+}
+
+#contactForm button:focus {
+    outline: none;
+}
+
+footer p,
+footer a {
+    color: var(--color-text-light);
+}
+
+@media (max-width: 992px) {
+    nav {
+        float: none;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    header h1 {
+        margin-left: 0;
+        float: none;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .perfume-item {
+        width: calc(33.33% - 60px);
+    }
+
+    .header-right .container {
+        padding-left: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    #search-bar {
+        width: 60%;
+    }
+
+    .perfume-item {
+        width: calc(50% - 60px);
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header h1 {
+        margin-left: 10px;
+    }
+
+    nav {
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .perfume-item {
+        width: 100%;
+    }
+
+    footer {
+        padding: 20px 0;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    .header-logo {
+        width: 40px;
+    }
+}
+
+nav ul li a:hover {
+    color: var(--color-dark-pink);
+}
+
+.perfume-item h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.perfume-item p {
+    margin: 5px 0;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-border);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #7f8c8d;
+}
+
+#contactForm input,
+#contactForm textarea {
+    font-size: 16px;
+}
+
+.social-media img {
+    filter: brightness(0) invert(1);
+}
+
+.social-media img:hover {
+    filter: brightness(0.8);
+}
+
+button:active,
+.add-to-cart:active {
+    transform: scale(0.98);
+}
+
+#search-bar::placeholder {
+    color: var(--color-border);
+}
+
+/* Style for the cart count badge */
+#cart-count {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    vertical-align: super;
+    margin-left: 5px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background-color: var(--color-light-pink);
+    padding: 20px 30px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    text-align: center;
+    max-width: 400px;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content p {
+    color: var(--color-text-dark);
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.modal-content button {
+    background-color: var(--color-dark-pink);
+    color: var(--color-text-dark);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+    background-color: var(--color-medium-pink);
+}
+
+.perfume-item .price {
+    font-weight: bold;
+}
+
+.perfume-item .description {
+    font-style: italic;
+    font-family: 'Cursive', sans-serif;
+}
+
+/* Style for the rating stars */
+/* Style for the rating stars */
+.rating {
+    margin-bottom: 10px;
+}
+
+.rating i {
+    margin-right: 2px;
+    font-size: 18px;
+    color: yellow;
+    /* Set stars to yellow */
+}
+
+/* Optional: Adjust the star size if needed */
+.rating .fas.fa-star,
+.rating .far.fa-star {
+    transition: color 0.3s ease;
+}
+
+/* Highlight stars on hover (optional) */
+.perfume-item:hover .rating i {
+    color: orange;
+}
+
+/* Style for team member images */
+.team-image {
+    width: 100px;
+    /* Adjust the width as desired */
+    height: 100px;
+    /* Adjust the height as desired */
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Optional: Adjust the layout of team members for smaller images */
+.team-members {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* Adjust spacing between team members */
+}
+
+.team-member {
+    text-align: center;
+    margin: 10px;
+    max-width: 150px;
+    /* Reduce the maximum width to accommodate smaller images */
+}
+
+.team-member h4 {
+    margin: 10px 0 5px 0;
+    font-size: 16px;
+    /* Adjust font size if needed */
+}
+
+.team-member p {
+    color: #555;
+    font-size: 14px;
+    /* Adjust font size if needed */
+}
+
+/* Existing styles... */
+
+/* Welcome Section Styles */
+/* Existing styles... */
+
+/* Welcome Section Styles */
+.welcome-section {
+    background-image: url("welcome-background.jpg");
+    /* Replace with your desired background image */
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    color: var(--color-text-light);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.welcome-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(60, 61, 55, 0.6);
+    /* Overlay color for better text readability */
+    z-index: 1;
+}
+
+.welcome-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.welcome-content h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.welcome-content p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.scroll-button {
+    display: inline-block;
+    background-color: var(--color-dark-pink);
+    color: var(--color-text-dark);
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.scroll-button:hover {
+    background-color: var(--color-hover);
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Adjustments for Featured Perfumes Section */
+/* Existing styles... */
+
+/* Featured Perfumes Section */
+/* Existing styles... */
+
+/* Featured Perfumes Section */
+#featured-perfumes {
+    padding: 50px 20px;
+    background-color: var(--color-light-pink);
+}
+
+#featured-perfumes h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: var(--color-text-dark);
+}
+
+.perfume-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.perfume-item {
+    background-color: var(--color-medium-pink);
+    border: 1px solid var(--color-border);
+    padding: 15px;
+    width: 20%;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.perfume-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(242, 190, 209, 0.2);
+}
+
+.perfume-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.perfume-item h3 {
+    color: var(--color-text-dark);
+    margin: 10px 0 5px 0;
+    font-size: 18px;
+}

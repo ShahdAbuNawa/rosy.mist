@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Products - Rosy Mist</title>
+    <link rel="icon" type="image/x-icon" href="logo.jpg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <img src="logo.jpg" alt="Rosy Mist Logo" class="header-logo">
+            <h1>Rosy Mist</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li>
+                        <a href="cart.html">
+                            <i class="fa-solid fa-cart-shopping"></i> <span id="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Search Bar -->
+        <section id="search">
+            <input type="text" id="search-bar" placeholder="Search perfumes...">
+        </section>
+
+        <!-- Products Grid -->
+        <section id="products">
+            <h2 class="our">Our Products</h2>
+            <div class="perfume-grid" id="perfume-list">
+                <!-- Products will be loaded here dynamically by scripts.js -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p class="con">Contact us at info@perfumestore.com</p>
+        <div class="social-media">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <!-- Custom Modal -->
+    <div id="custom-modal" class="modal">
+        <div class="modal-content">
+            <p id="modal-text">Item added to your cart!</p>
+            <button id="close-modal">OK</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts.js"></script>
+    <script>
+        // Function to close the modal
+        document.getElementById('close-modal').addEventListener('click', function () {
+            const modal = document.getElementById('custom-modal');
+            modal.classList.remove('show');
+        });
+
+        // Optional: Close the modal when clicking outside the modal content
+        window.addEventListener('click', function (event) {
+            const modal = document.getElementById('custom-modal');
+            if (event.target === modal) {
+                modal.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+
+</html>
